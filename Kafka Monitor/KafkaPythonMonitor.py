@@ -7,6 +7,8 @@ import requests
 TOPIC = 'Thingsboard'
 GROUP = 'python1'
 BOOTSTRAP_SERVERS = ['13.251.166.96:9092']
+LOG_SERVER = 'http://13.251.166.96/api/v1/VUsTDQL36fZTknuxEdDG/telemetry'
+CHECK_FREQUENCY = 60
 
 # init the consumer connection
 # disable the auto commit to avoid influencing polling process
@@ -43,7 +45,7 @@ while True:
             x = requests.post(url, data = json.dumps(myobj), headers=headers)
             print(x.text)
         # monitor the lag every 60s
-        time.sleep(60)
+        time.sleep(CHECK_FREQUENCY)
     except Exception as e:
         print (e)
     except (KeyboardInterrupt, SystemExit):
