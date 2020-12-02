@@ -5,10 +5,10 @@ The kafka python module lib
 Import to your python program
 
 # *SMS Controller*
-Thingsboard push the message included alarm and SMS recipients to a kafka topic
-This SMS controller poll the message in a certain interval, and reassamble the SMS request and send to SMS gateway
-*pm2 start SMSController.py --interpreter python3*
-Check the document inside for more details
+Thingsboard push the message included alarm and SMS recipients to a kafka topic \r
+This SMS controller poll the message in a certain interval, and reassamble the SMS request and send to SMS gateway \r
+*pm2 start SMSController.py --interpreter python3* \r
+Check the document inside for more details \r
 **Current Stage**
 Simulate the sensor reading in Node-Red and send to UAT Thingsboard
 UAT Thingsboard generate the alarm and SMS recipients, then push the message to local kafka
